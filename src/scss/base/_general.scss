@@ -1,0 +1,176 @@
+/* ===========================
+    DEFAULTS
+  ============================ */
+
+*, 
+::after, 
+::before {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  font-family: $p-font;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background: white;
+  
+  @include media($max, $tablet-small) {
+    background: black;
+  }
+}
+
+.site-content {
+  opacity: 1;
+  @extend %transition-slow;
+}
+
+.content {
+  &__header {
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: $green;
+    margin-top: 20px;
+  }
+
+  &__sub {
+    letter-spacing: 1px;
+  }
+}
+
+
+// Behavior
+
+button {
+  outline-color: none;
+  border: none;
+  box-shadow: none;
+  &:active,
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+a:hover {
+  color: $white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+// Animate on scroll css
+
+.scale-up {
+  animation: scale-up 0.5s ease-in-out both;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.9);
+    opacity: 0
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scale-up {
+  animation: scale-up 0.5s ease-in-out both;
+}
+
+.first {
+  animation-delay: 0.5s;
+}
+
+.second {
+  animation-delay: 1s;
+}
+
+.third {
+  animation-delay: 1.5s;
+}
+
+.works__image {
+  &--sl {
+    animation-delay: 0.2s;
+  }
+
+  &--diy {
+    animation-delay: 0.4s;
+  }
+
+  &--iconic {
+    animation-delay: 0.6s;
+  }
+
+  &--ukt {
+    animation-delay: 0.8s;
+  }
+
+  &--yourdebt {
+    animation-delay: 1s;
+  }
+
+  &--dpl {
+    animation-delay: 1.2s;
+  }
+}
+
+
+// Container CSS
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px;
+
+  &__row {
+    display: flex;
+  }
+
+  @include media($min, 576px) {
+    max-width: 540px;
+  }
+
+  @include media($min, 768px) {
+    max-width: 720px;
+  }
+
+  @include media($min, 992px) {
+    max-width: 960px;
+  }
+  
+  @include media($min, 1200px) {
+    max-width: 1140px;
+  }
+}

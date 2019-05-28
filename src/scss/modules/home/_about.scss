@@ -1,0 +1,43 @@
+.about {
+  padding: 50px 0 0;
+  position: relative;
+  border-bottom: 1px solid $green;
+  background: linear-gradient(to bottom, #243B39 0%, $dark-gray 100%);
+
+  .profile-img {
+    border: 5px solid $green;
+    border-radius: 100%;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    z-index: 20;
+
+    &__container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .content {
+    text-align: center;
+    padding: 30px 25px 100px;
+
+    &__header {
+      color: $green;
+      font-weight: 600;
+    }
+
+    &__sub {
+      color: $white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      width: 75%;
+      margin: auto;
+
+      @include media($max, $tablet-small) {
+        width: unset;
+      }
+    }
+  }
+}
