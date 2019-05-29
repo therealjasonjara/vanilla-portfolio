@@ -10,7 +10,7 @@ gulp.task('sass', () => {
   return gulp.src('src/scss/*.scss')
     .pipe(sass())
     .pipe(autoprefixer())
-    //.pipe(cleanCSS())
+    .pipe(cleanCSS())
     .pipe(gulp.dest('./public'))
     .pipe(bs.stream());
 });
@@ -18,7 +18,7 @@ gulp.task('sass', () => {
 gulp.task('pug', () => {
   return gulp.src('src/template/**/index.pug')
   .pipe(pug({
-    pretty: true // Change this to false if you want to minify the HTML file
+    pretty: false // Change this to false if you want to minify the HTML file
   }))
   .pipe(gulp.dest('./public/'))
 })
