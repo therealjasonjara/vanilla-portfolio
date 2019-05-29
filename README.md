@@ -1,4 +1,10 @@
-# gulp-sass-pug
-Static Portfolio site made with Pug, Sass, and compiled using Gulp.js
+# Vanilla Portfolio
+Rewritten my current [portfolio website](https://creativeflea.xyz) removing Bootstrap dependency.
 
-# Create static page using pug and sass on the fly.
+My approach is still inspired with bootstrap's grid system.
+
+Credits:<br />
+[Gulp](https://gulpjs.com)<br />
+[Sass](https://sass-lang.com/)<br />
+[Pug](https://pugjs.org)<br />
+[Particles.js](https://vincentgarreau.com/particles.js/)
