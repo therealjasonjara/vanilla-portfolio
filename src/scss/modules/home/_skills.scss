@@ -4,12 +4,24 @@
   color: $dark-gray;
   border-bottom: 1px solid $green;
 
+  .container__row {
+    @include media($max, 576px) {
+      flex-direction: column;
+    }
+  }
+
   .cards {
     display: flex;
     flex: 0 0 50%;
     max-width: 50%;
     padding-right: 15px;
     padding-left: 15px;
+
+    @include media($max, 576px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      flex-direction: row;
+    }
   }
 
   .content {
