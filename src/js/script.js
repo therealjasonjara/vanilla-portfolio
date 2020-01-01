@@ -113,3 +113,5 @@ window.addEventListener("scroll", () => {
     }
   }
 });
+
+document.getElementById("year").innerHTML = new Date().getFullYear()

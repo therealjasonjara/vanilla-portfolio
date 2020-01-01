@@ -114,18 +114,4 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Preloader
-
-const preloader = document.querySelector(".preloader__container");
-
-const preloadScroll = () => {
-  window.scrollTo(0, 0);
-};
-
-window.addEventListener("scroll", preloadScroll);
-
-window.addEventListener("load", function() {
-  preloader.style.opacity = 0;
-  preloader.classList.add("hide");
-  window.removeEventListener("scroll", preloadScroll);
-});
+document.getElementById("year").innerHTML = new Date().getFullYear()
